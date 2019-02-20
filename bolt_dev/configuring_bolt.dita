@@ -1,0 +1,21 @@
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" ditaarch:DITAArchVersion="1.2" domains="(topic concept)                            (topic hi-d)                            (topic ut-d)                            (topic indexing-d)                             (topic pr-d)                            (topic sw-d)                            (topic ui-d)   " id="concept-7312" class="- topic/topic concept/concept "><title class="- topic/title ">Configuring 
+
+      
+
+      
+
+      
+
+      <ph conkeyref="ProductNames/bolt" class="- topic/ph "/></title><shortdesc class="- topic/shortdesc ">Create a configuration file to store and automate the command-line flags you use every time you run 
+
+      
+
+      
+
+      <ph conkeyref="ProductNames/bolt" class="- topic/ph "/>.</shortdesc><prolog class="- topic/prolog "><author translate="no" type="creator" class="- topic/author ">Michelle Fredette &lt;michelle.fredette@puppet.com&gt;</author></prolog><conbody class="- topic/body  concept/conbody "><p class="- topic/p ">By default <codeph translate="no" class="+ topic/ph pr-d/codeph ">$HOME/.puppetlabs/bolt/</codeph>&#160;is the base directory for user-supplied data such as the configuration and inventory files, or the&#160;<codeph translate="no" class="+ topic/ph pr-d/codeph ">Boltdir</codeph>. To set up a default global configuration for <ph conkeyref="ProductNames/bolt" class="- topic/ph "/>, create a <codeph translate="no" class="+ topic/ph pr-d/codeph ">~/.puppetlabs/bolt/bolt.yaml</codeph> file with global options at the top level of the file. Configure transport  specific options for each transport. If a config option is set in the config file and passed with the corresponding command-line flag, the flag  takes precedence.</p><p class="- topic/p ">Before it uses the global directory <codeph translate="no" class="+ topic/ph pr-d/codeph ">$HOME/.puppetlabs/bolt</codeph>, 
+         
+
+         
+
+         <ph conkeyref="ProductNames/bolt" class="- topic/ph "/>  searches for <codeph translate="no" class="+ topic/ph pr-d/codeph ">Boltdir</codeph> in the parent directories of the directory from which it was run. If found, <codeph translate="no" class="+ topic/ph pr-d/codeph ">Boltdir</codeph> is the default location for configuration, inventory, and modules instead of the global path. When you commit a <codeph translate="no" class="+ topic/ph pr-d/codeph ">Boltdir</codeph> to a project  you can share <ph conkeyref="ProductNames/bolt" class="- topic/ph "/> configuration and code between users.</p></conbody></concept>

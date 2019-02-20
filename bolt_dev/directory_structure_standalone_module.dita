@@ -1,0 +1,40 @@
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept-9775" class="- topic/topic concept/concept "><title class="- topic/title ">Standalone modules</title><shortdesc class="- topic/shortdesc ">
+       Standalone modules can be published to the 
+
+      
+
+      
+
+      <ph conkeyref="ProductNames/forge" class="- topic/ph "/> or saved in a local code repository. When you create a standalone module, be sure all dependencies are specified in the modulepath. 
+</shortdesc><prolog class="- topic/prolog "><author translate="no" type="creator" class="- topic/author ">Melissa Amos &lt;melissa.amos@puppet.com&gt;</author></prolog><conbody class="- topic/body  concept/conbody "><p class="- topic/p ">To run a plan, you must  declare the modulepath to find it, typically with <codeph class="+ topic/ph pr-d/codeph ">bolt --modulepath ..</codeph> where <codeph class="+ topic/ph pr-d/codeph ">modulepath</codeph> specifies the  parent of the module directory you're working in. Any dependencies required to run the plan must  either be in the same parent directory or in additional directories specified as modulepath entries.</p><p class="- topic/p ">
+         <note type="tip" class="- topic/note ">As a best practice, write automated tests for the tasks and plans in your module, if possible. For information about automated testing patterns, check out these resources: 
+
+         
+
+         
+
+         
+
+            
+
+            
+
+            <ul class="- topic/ul "><li class="- topic/li ">
+                  <p class="- topic/p "><xref href="https://github.com/puppetlabs/puppetlabs-facts" scope="external" class="- topic/xref ">Example of unit testing plans and integration (acceptance) testing tasks</xref> (<ph conkeyref="ProductNames/github" class="- topic/ph "/>)
+               
+               
+               
+                  
+                  
+                  </p>
+               </li><li class="- topic/li ">
+                  <p class="- topic/p "><xref href="https://puppet.com/blog/writing-robust-puppet-bolt-tasks-guide" scope="external" class="- topic/xref ">Writing Robust Puppet Bolt Tasks: A Guide</xref> (<ph conkeyref="ProductNames/puppet" class="- topic/ph "/> blog)
+               
+               
+               
+                  
+                  
+                  </p>
+               </li></ul></note>
+      </p></conbody></concept>

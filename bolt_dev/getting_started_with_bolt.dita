@@ -1,0 +1,56 @@
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="concept-6880" domains="(topic concept)                            (topic hi-d)                            (topic ut-d)                            (topic indexing-d)                             (topic pr-d)                            (topic sw-d)                            (topic ui-d)   " ditaarch:DITAArchVersion="1.2" class="- topic/topic concept/concept "><title class="- topic/title ">Self-paced training</title><shortdesc class="- topic/shortdesc ">Using hands-on exercises, discover how 
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <ph conkeyref="ProductNames/bolt" class="- topic/ph "/> can help you manage your infrastructure.
+
+</shortdesc><prolog class="- topic/prolog "><author type="creator" translate="no" class="- topic/author ">Kate Lopresti &lt;kate.lopresti@puppet.com&gt;</author></prolog><conbody class="- topic/body  concept/conbody "><section class="- topic/section "><title class="- topic/title ">Hands-on lab</title><p class="- topic/p ">The 
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         <ph conkeyref="ProductNames/puppet" class="- topic/ph "/> Tasks Hands-on Lab is a 
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         <ph conkeyref="ProductNames/github" class="- topic/ph "/> repository that contains sample files, code examples, and exercises to help you configure 
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         <ph conkeyref="ProductNames/bolt" class="- topic/ph "/> and learn to use it in a safe environment. For more information, see the <xref href="https://github.com/puppetlabs/tasks-hands-on-lab#puppet-tasks-hands-on-lab" scope="external" format="html" class="- topic/xref ">puppetlabs/tasks-hands-on-lab repository</xref>.
+
+		</p></section><section class="- topic/section "><title class="- topic/title ">Online training</title><p class="- topic/p ">Learn to run tasks everywhere you need them, when you need them. Our&#160;free, online self-paced training&#160;gets you up and running with the open-source task runner <ph conkeyref="ProductNames/bolt" class="- topic/ph "/> and <ph conkeyref="ProductNames/puppet" class="- topic/ph "/> Tasks for <ph conkeyref="ProductNames/pe_long" class="- topic/ph "/>. For more information, go to
+
+            <xref href="https://learn.puppet.com/course/puppet-orchestration-bolt-and-tasks" scope="external" format="html" class="- topic/xref ">learn.puppet.com</xref>.</p></section></conbody></concept>

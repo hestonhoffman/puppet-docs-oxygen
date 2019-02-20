@@ -1,0 +1,17 @@
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="concept-1477" domains="(topic concept)                            (topic hi-d)                            (topic ut-d)                            (topic indexing-d)                             (topic pr-d)                            (topic sw-d)                            (topic ui-d)   " ditaarch:DITAArchVersion="1.2" class="- topic/topic concept/concept "><title class="- topic/title ">Structured input</title><shortdesc class="- topic/shortdesc ">For complex input, such as hashes and arrays, you can accept structured JSON in your task.</shortdesc><prolog class="- topic/prolog "><author type="creator" translate="no" class="- topic/author ">Jean Bond &lt;jean@puppet.com&gt;</author></prolog><conbody class="- topic/body  concept/conbody "><p class="- topic/p ">By default, the task runner passes task parameters as both environment variables and as a single JSON object on stdin. The JSON input allows the task to accept complex data structures.</p><p class="- topic/p ">To accept parameters as JSON on stdin, set the <codeph translate="no" class="+ topic/ph pr-d/codeph ">params</codeph> key to accept JSON on <codeph translate="no" class="+ topic/ph pr-d/codeph ">stdin</codeph>.</p><codeblock translate="no" xml:space="preserve" class="+ topic/pre pr-d/codeblock ">#!/opt/puppetlabs/puppet/bin/ruby
+require 'json'
+
+params = JSON.parse(STDIN.read)
+
+exitcode = 0
+params['files'].each do |filename|
+  begin
+    FileUtils.touch(filename)
+    puts "updated file #{filename}"
+  rescue
+    exitcode = 1
+    puts "couldn't update file #{filename}"
+  end
+end
+exit exitcode</codeblock><p class="- topic/p "> If your task accepts input on <codeph translate="no" class="+ topic/ph pr-d/codeph ">stdin</codeph> it should specify <codeph translate="no" class="+ topic/ph pr-d/codeph ">"input_method": "stdin"</codeph> in its <codeph translate="no" class="+ topic/ph pr-d/codeph ">metadata.json</codeph> file, or it may not work with sudo for some users.</p></conbody></concept>

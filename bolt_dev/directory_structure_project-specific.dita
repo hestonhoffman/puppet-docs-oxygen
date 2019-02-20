@@ -1,0 +1,11 @@
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept-6910" class="- topic/topic concept/concept "><title class="- topic/title ">Modules for projects</title><shortdesc class="- topic/shortdesc ">Tasks and plans developed to support a particular project can be included with that project in a <codeph class="+ topic/ph pr-d/codeph ">Boltdir</codeph> at  the root of the project.</shortdesc><prolog class="- topic/prolog "><author translate="no" type="creator" class="- topic/author ">Melissa Amos &lt;melissa.amos@puppet.com&gt;</author></prolog><conbody class="- topic/body  concept/conbody "><p class="- topic/p ">
+  
+  A typical project including a <codeph class="+ topic/ph pr-d/codeph ">Boltdir</codeph> is structured like this:
+
+
+         <codeblock class="+ topic/pre pr-d/codeblock ">├── Boltdir
+│   ├── Puppetfile
+│   └── site/
+│       └── project/  #sample module name
+└── other_project_files</codeblock></p><p class="- topic/p ">Tasks and plans  go in the <codeph class="+ topic/ph pr-d/codeph ">Boltdir/site/project/tasks</codeph> and <codeph class="+ topic/ph pr-d/codeph ">Boltdir/site/project/plans</codeph> directories, respectively.</p><p class="- topic/p ">The Puppetfile declares modules that your tasks and plans depend on. Within the project directory, run <codeph class="+ topic/ph pr-d/codeph ">bolt puppetfile install</codeph> to install dependencies to the <codeph class="+ topic/ph pr-d/codeph ">Boltdir/modules/</codeph> directory. When you run tasks and plans within the project, the <codeph class="+ topic/ph pr-d/codeph ">Boltdir</codeph> is detected and the default modulepaths (<codeph class="+ topic/ph pr-d/codeph ">Boltdir/site/</codeph> and <codeph class="+ topic/ph pr-d/codeph ">Boltdir/modules/</codeph>) are searched for modules containing <ph conkeyref="ProductNames/bolt" class="- topic/ph "/> content.</p></conbody></concept>

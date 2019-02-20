@@ -1,0 +1,15 @@
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept-5648" class="- topic/topic concept/concept "><title class="- topic/title ">Modules in control repositories</title><shortdesc class="- topic/shortdesc ">The control repository pattern is useful for sharing tasks and plans — and the modules they depend on — with others. </shortdesc><prolog class="- topic/prolog "><author translate="no" type="creator" class="- topic/author ">Melissa Amos &lt;melissa.amos@puppet.com&gt;</author></prolog><conbody class="- topic/body  concept/conbody "><p class="- topic/p ">Your organization's centralized  control repository can also act as your <codeph class="+ topic/ph pr-d/codeph ">Boltdir</codeph> by adding  <codeph class="+ topic/ph pr-d/codeph ">bolt.yaml</codeph> to the root of the repository. The <codeph class="+ topic/ph pr-d/codeph ">bolt.yaml</codeph> can be an empty file. For more information about setting up a centralized control repository for your organization, see  <xref href="https://github.com/puppetlabs/best-practices/blob/master/control-repo-contents.md" scope="external" class="- topic/xref ">best practices for control repositories</xref> and a corresponding <xref href="https://github.com/puppetlabs/control-repo" scope="external" class="- topic/xref ">example</xref>.</p><p class="- topic/p "> 
+  
+  A typical control repository for running plans is structured like this:
+
+
+         <codeblock class="+ topic/pre pr-d/codeblock ">├── bolt.yaml
+├── data/
+├── hiera.yaml
+├── Puppetfile
+├── README.md
+└── site/
+    ├── profile/  #sample module name</codeblock></p><p class="- topic/p ">Tasks and plans  go in the <codeph class="+ topic/ph pr-d/codeph ">site/profile/tasks</codeph> and <codeph class="+ topic/ph pr-d/codeph ">site/profile/plans</codeph> directories, respectively. The <codeph class="+ topic/ph pr-d/codeph ">hiera.yaml</codeph> file is used when <xref href="applying_manifest_blocks.dita" class="- topic/xref ">applying manifest code</xref> and can also be placed within the module at <codeph class="+ topic/ph pr-d/codeph ">site/profile/</codeph>.</p><p class="- topic/p ">The Puppetfile declares modules that your tasks and plans depend on. Within the control repository, run <codeph class="+ topic/ph pr-d/codeph ">bolt puppetfile install</codeph> to install dependencies to the <codeph class="+ topic/ph pr-d/codeph ">modules/</codeph> directory. When you run tasks and plans within the control repository, the  <codeph class="+ topic/ph pr-d/codeph ">bolt.yaml</codeph> file is interpreted as a <codeph class="+ topic/ph pr-d/codeph ">Boltdir</codeph>, and the default modulepaths (<codeph class="+ topic/ph pr-d/codeph ">site/</codeph> and <codeph class="+ topic/ph pr-d/codeph ">modules/</codeph>) are searched for modules containing 
+
+         <ph conkeyref="ProductNames/bolt" class="- topic/ph "/> content.</p></conbody></concept>

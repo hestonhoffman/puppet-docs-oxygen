@@ -1,0 +1,553 @@
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" ditaarch:DITAArchVersion="1.2" domains="(topic concept)                            (topic hi-d)                            (topic ut-d)                            (topic indexing-d)                             (topic pr-d)                            (topic sw-d)                            (topic ui-d)   " id="concept-7985" class="- topic/topic concept/concept "><title class="- topic/title ">New features</title><shortdesc class="- topic/shortdesc ">New features added to 
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <ph conkeyref="ProductNames/bolt" class="- topic/ph "/> in the 1.x release series.&#160;</shortdesc><prolog class="- topic/prolog "><author translate="no" type="creator" class="- topic/author ">Jean Bond &lt;jean@puppet.com&gt;</author></prolog><conbody class="- topic/body  concept/conbody "><section class="- topic/section ">
+         <title class="- topic/title ">Hyphens allowed in aliases and group names (1.10.0)</title>Node aliases and group names in the Bolt inventory can now contain hyphens. (<xref href="https://tickets.puppetlabs.com/browse/BOLT-1022" scope="external" class="- topic/xref ">BOLT-1022</xref>)</section><section class="- topic/section "><title class="- topic/title ">Improved out-of-the-box tasks (1.9.0)</title>
+
+         <p class="- topic/p ">
+  
+  The <codeph class="+ topic/ph pr-d/codeph ">package</codeph> and <codeph class="+ topic/ph pr-d/codeph ">service</codeph> tasks now select task implementation based on available target features while their platform-specific implementations are private.
+ (<xref href="https://tickets.puppetlabs.com/browse/BOLT-1049" scope="external" class="- topic/xref ">BOLT-1049</xref>)</p>
+      </section><section class="- topic/section "><title class="- topic/title ">Respect multiple PuppetDB <codeph class="+ topic/ph pr-d/codeph ">server_urls</codeph> (1.9.0)</title>Bolt now tries to connect to all configured 
+
+         
+
+         
+
+         
+
+         
+
+         
+
+         PuppetDB <codeph class="+ topic/ph pr-d/codeph ">server_urls</codeph> before failing. (<xref href="https://tickets.puppetlabs.com/browse/BOLT-938" scope="external" class="- topic/xref ">BOLT-938</xref>)</section><section class="- topic/section ">
+         <title class="- topic/title ">Standard library functions (1.8.0)</title>
+
+         <p class="- topic/p ">Bolt now includes several standard library functions useful for writing plans, including: 
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            <ul class="- topic/ul "><li class="- topic/li ">
+                  <p class="- topic/p ">
+                     <codeph translate="no" class="+ topic/ph pr-d/codeph ">ctrl::sleep</codeph>
+                  </p>
+               </li><li class="- topic/li ">
+                  <p class="- topic/p ">
+                     <codeph translate="no" class="+ topic/ph pr-d/codeph ">ctrl::do_until</codeph>
+                  </p>
+               </li><li class="- topic/li ">
+                  <p class="- topic/p ">
+                     <codeph translate="no" class="+ topic/ph pr-d/codeph ">file::read</codeph>
+                  </p>
+               </li><li class="- topic/li ">
+                  <p class="- topic/p ">
+                     <codeph translate="no" class="+ topic/ph pr-d/codeph ">file::write</codeph>
+                  </p>
+               </li><li class="- topic/li ">
+                  <p class="- topic/p ">
+                     <codeph translate="no" class="+ topic/ph pr-d/codeph ">system::env</codeph>
+                  </p>
+               </li></ul>See&#160;
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            <xref href="plan_functions.dita" class="- topic/xref "/>&#160;for details. (<xref format="html" href="https://tickets.puppetlabs.com/browse/BOLT-1054" scope="external" class="- topic/xref ">BOLT-1054</xref>)</p>
+      </section><section class="- topic/section ">
+         <title class="- topic/title ">Configure proxy SSH connections through jump hosts (1.7.0)</title>
+
+         <p class="- topic/p ">You can now configure proxy SSH connections through jump hosts from the inventory file with the <codeph translate="no" class="+ topic/ph pr-d/codeph ">proxyjump</codeph> SSH configuration option. (<xref format="html" href="https://tickets.puppetlabs.com/browse/BOLT-1039" scope="external" class="- topic/xref ">BOLT-1039</xref>)</p>
+      </section><section class="- topic/section ">
+         <title class="- topic/title ">Query resource states from a plan  (1.7.0)</title>
+
+         <p class="- topic/p ">You can now query resource states from a plan with the <codeph translate="no" class="+ topic/ph pr-d/codeph ">get_resources</codeph> function. (<xref format="html" href="https://tickets.puppetlabs.com/browse/BOLT-1035" scope="external" class="- topic/xref ">BOLT-1035</xref>)</p>
+      </section><section class="- topic/section ">
+         <title class="- topic/title ">Specify an array of directories in <codeph translate="no" class="+ topic/ph pr-d/codeph ">modulepath</codeph> (1.7.0)</title>
+
+         <p class="- topic/p ">You can now specify an array of directories for the <codeph translate="no" class="+ topic/ph pr-d/codeph ">modulepath</codeph> setting in <codeph translate="no" class="+ topic/ph pr-d/codeph ">bolt.yaml</codeph>, rather than just a string. This change enables using a single <codeph translate="no" class="+ topic/ph pr-d/codeph ">bolt.yaml</codeph> on both 
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            <ph conkeyref="ProductNames/nix" class="- topic/ph "/> and 
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            <ph conkeyref="ProductNames/windows" class="- topic/ph "/> clients. (<xref format="html" href="https://tickets.puppetlabs.com/browse/BOLT-817" scope="external" class="- topic/xref ">BOLT-817</xref>)</p>
+      </section><section class="- topic/section ">
+         <title class="- topic/title ">Save  keystrokes on <codeph translate="no" class="+ topic/ph pr-d/codeph ">modulepath</codeph>, <codeph translate="no" class="+ topic/ph pr-d/codeph ">inventoryfile</codeph>, and <codeph translate="no" class="+ topic/ph pr-d/codeph ">verbose</codeph> (1.7.0)</title>
+
+         <p class="- topic/p ">You can now use shortened command options for <codeph translate="no" class="+ topic/ph pr-d/codeph ">modulepath</codeph> (<codeph translate="no" class="+ topic/ph pr-d/codeph ">-m</codeph>), <codeph translate="no" class="+ topic/ph pr-d/codeph ">inventoryfile</codeph> (<codeph translate="no" class="+ topic/ph pr-d/codeph ">-i</codeph>), and <codeph translate="no" class="+ topic/ph pr-d/codeph ">verbose</codeph> (<codeph translate="no" class="+ topic/ph pr-d/codeph ">-v</codeph>). (<xref format="html" href="https://tickets.puppetlabs.com/browse/BOLT-1047" scope="external" class="- topic/xref ">BOLT-1047</xref>)</p>
+      </section><section class="- topic/section ">
+         <title class="- topic/title ">Remote tasks (1.6.0)</title>
+
+         <p class="- topic/p ">You can now run  tasks on a proxy target that remotely interacts with the real target, as defined by the <codeph translate="no" class="+ topic/ph pr-d/codeph ">run-on</codeph> option. Remote tasks are useful for targets like network devices that have limited shell environments, or  cloud services driven only by HTTP APIs. Connection information for non-server targets, like HTTP endpoints, can  be stored in inventory. (<xref format="html" href="https://tickets.puppetlabs.com/browse/BOLT-791" scope="external" class="- topic/xref ">BOLT-791</xref>)</p>
+      </section><section class="- topic/section ">
+         <title class="- topic/title "><codeph translate="no" class="+ topic/ph pr-d/codeph ">reboot</codeph> module plan (1.6.0)</title>
+
+         <p class="- topic/p ">Bolt now ships with the 
+
+            
+
+            
+
+
+               <xref format="html" href="https://forge.puppet.com/puppetlabs/reboot" scope="external" class="- topic/xref "><codeph class="+ topic/ph pr-d/codeph ">reboot</codeph> module</xref>, and that module now provides a  plan that reboots targets and waits for them to become available. (<xref format="html" href="https://tickets.puppetlabs.com/browse/BOLT-459" scope="external" class="- topic/xref ">BOLT-459</xref>)</p>
+      </section><section class="- topic/section ">
+         <title class="- topic/title ">Local transport on 
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            <ph conkeyref="ProductNames/windows" class="- topic/ph "/> (1.6.0)</title>
+
+         <p class="- topic/p ">The <codeph translate="no" class="+ topic/ph pr-d/codeph ">local</codeph> transport option is now supported on 
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            <ph conkeyref="ProductNames/windows" class="- topic/ph "/>. (<xref format="html" href="https://tickets.puppetlabs.com/browse/BOLT-608" scope="external" class="- topic/xref ">BOLT-608</xref>)</p>
+      </section><section class="- topic/section ">
+         <title class="- topic/title "><codeph translate="no" class="+ topic/ph pr-d/codeph ">bolt_shim</codeph> module contents marked as sensitive (1.6.0)</title>
+
+         <p class="- topic/p ">The <codeph translate="no" class="+ topic/ph pr-d/codeph ">bolt_shim</codeph> module that enables using 
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            <ph conkeyref="ProductNames/bolt" class="- topic/ph "/> with 
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            <ph conkeyref="ProductNames/pe" class="- topic/ph "/> now marks file content as sensitive, preventing it from being logged or stored in a database. (<xref format="html" href="https://tickets.puppetlabs.com/browse/BOLT-815" scope="external" class="- topic/xref ">BOLT-815</xref>)</p>
+      </section><section class="- topic/section ">
+         <title class="- topic/title ">Node aliases (1.5.0)</title>
+
+         <p class="- topic/p ">You can now specify aliases for nodes in your inventory and then use the aliases to refer to specific nodes. (<xref format="html" href="https://tickets.puppetlabs.com/browse/BOLT-510" scope="external" class="- topic/xref ">BOLT-510</xref>)</p>
+      </section><section class="- topic/section ">
+         <title class="- topic/title ">Run <codeph translate="no" class="+ topic/ph pr-d/codeph ">apply</codeph> with 
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            <ph conkeyref="ProductNames/pe" class="- topic/ph "/> orchestrator without installing  <codeph translate="no" class="+ topic/ph pr-d/codeph ">puppet_agent</codeph> module (1.5.0)</title>
+
+         <p class="- topic/p ">
+            <ph conkeyref="ProductNames/bolt" class="- topic/ph "/> no longer requires installing the <codeph translate="no" class="+ topic/ph pr-d/codeph ">puppet_agent</codeph> module  in 
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            <ph conkeyref="ProductNames/pe" class="- topic/ph "/> in order to run <codeph translate="no" class="+ topic/ph pr-d/codeph ">apply</codeph> actions with the 
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            <ph conkeyref="ProductNames/pe" class="- topic/ph "/> orchestrator. (<xref format="html" href="https://tickets.puppetlabs.com/browse/BOLT-940" scope="external" class="- topic/xref ">BOLT-940</xref>)</p>
+      </section><section class="- topic/section ">
+         <title class="- topic/title ">
+            <ph conkeyref="ProductNames/bolt" class="- topic/ph "/><codeph translate="no" class="+ topic/ph pr-d/codeph ">apply</codeph> with orchestrator&#160;(1.4.0)</title>
+
+         <p class="- topic/p ">A new <codeph translate="no" class="+ topic/ph pr-d/codeph ">puppetlabs-apply_helper</codeph> module enables using 
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            <ph conkeyref="ProductNames/bolt" class="- topic/ph "/><codeph translate="no" class="+ topic/ph pr-d/codeph ">apply</codeph> with orchestrator.&#160;For details, see the <xref format="html" href="https://forge.puppet.com/puppetlabs/apply_helpers" scope="external" class="- topic/xref ">module README</xref>. (<xref format="html" href="https://tickets.puppetlabs.com/browse/BOLT-941" scope="external" class="- topic/xref ">BOLT-941</xref>)</p>
+      </section><section class="- topic/section ">
+         <title class="- topic/title ">Add targets to a group (1.4.0)</title>
+
+         <p class="- topic/p ">A new <codeph translate="no" class="+ topic/ph pr-d/codeph ">add_to_group</codeph> function allows you to add targets to an inventory group during plan execution. (<xref format="html" href="https://tickets.puppetlabs.com/browse/BOLT-942" scope="external" class="- topic/xref ">BOLT-942</xref>)</p>
+      </section><section class="- topic/section ">
+         <title class="- topic/title ">Additional plan test helpers (1.4.0)</title>
+
+         <p class="- topic/p ">The BoltSpec::Plans library now supports unit testing plans that use the <codeph translate="no" class="+ topic/ph pr-d/codeph ">_run_as</codeph> parameter, <codeph translate="no" class="+ topic/ph pr-d/codeph ">apply</codeph>, <codeph translate="no" class="+ topic/ph pr-d/codeph ">run_command</codeph>, <codeph translate="no" class="+ topic/ph pr-d/codeph ">run_script</codeph>, and <codeph translate="no" class="+ topic/ph pr-d/codeph ">upload_file</codeph>. (<xref format="html" href="https://tickets.puppetlabs.com/browse/BOLT-984" scope="external" class="- topic/xref ">BOLT-984</xref>)</p>
+      </section><section class="- topic/section ">
+         <title class="- topic/title ">Data collection about applied catalogs (1.4.0)</title>
+
+         <p class="- topic/p ">If analytics data collection is enabled, we now collect randomized info about the number of statements in an apply block, and how many resources that produces for each target. (<xref format="html" href="https://tickets.puppetlabs.com/browse/BOLT-644" scope="external" class="- topic/xref ">BOLT-644</xref>)</p>
+      </section><section class="- topic/section ">
+         <title class="- topic/title ">Docker transport for running commands on containers (1.3.0)</title>
+
+         <p class="- topic/p ">A new Docker transport option enables running commands on container instances with the Docker API. The Docker transport is experimental because the capabilities and role of the Docker API might change.(<xref format="html" href="https://tickets.puppetlabs.com/browse/BOLT-962" scope="external" class="- topic/xref ">BOLT-962</xref>)</p>
+      </section><section class="- topic/section ">
+         <title class="- topic/title ">Wait  until all target nodes accept connections (1.3.0)</title>
+
+         <p class="- topic/p ">A new <codeph translate="no" class="+ topic/ph pr-d/codeph ">wait_until_available</codeph> function waits until all targets are accepting connections, or triggers an error if the command times out. (<xref format="html" href="https://tickets.puppetlabs.com/browse/BOLT-956" scope="external" class="- topic/xref ">BOLT-956</xref>)</p>
+      </section><section class="- topic/section ">
+         <title class="- topic/title "> Apply 
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            <ph conkeyref="ProductNames/puppet" class="- topic/ph "/> manifest code  with bolt apply command (1.2.0)</title>
+
+         <p class="- topic/p ">The command <codeph translate="no" class="+ topic/ph pr-d/codeph ">bolt&#160;apply</codeph> has been added to apply 
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            <ph conkeyref="ProductNames/puppet" class="- topic/ph "/> manifest code on targets without wrapping them in an <codeph translate="no" class="+ topic/ph pr-d/codeph ">apply()</codeph> block in a plan.
+               <note class="- topic/note ">This command is in development and subject to change. </note><xref format="html" href="https://tickets.puppetlabs.com/browse/BOLT-858" scope="external" class="- topic/xref ">(BOLT-858</xref>)</p>
+      </section><section class="- topic/section ">
+         <title class="- topic/title ">Python and Ruby helper  libraries for tasks (1.2.0)</title>
+
+         <p class="- topic/p ">Two new  libraries have been added to help you write tasks in Ruby and Python: 
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            <ul class="- topic/ul "><li class="- topic/li ">
+                  <p class="- topic/p ">
+                     <xref format="html" href="https://github.com/puppetlabs/puppetlabs-ruby_task_helper" scope="external" class="- topic/xref ">https://github.com/puppetlabs/puppetlabs-ruby_task_helper</xref>
+                  </p>
+               </li><li class="- topic/li ">
+                  <p class="- topic/p ">
+                     <xref format="html" href="https://github.com/puppetlabs/puppetlabs-python_task_helper" scope="external" class="- topic/xref ">https://github.com/puppetlabs/puppetlabs-python_task_helper</xref>
+                  </p>
+               </li></ul></p>
+
+         <p class="- topic/p ">Use these libraries to parse task input, catch errors, and produce task
+            output. For details, see <xref format="html" href="https://puppet.com/docs/bolt/1.x/writing_tasks.html#task-helpers" scope="external" class="- topic/xref ">Task Helpers</xref>. (<xref format="html" href="https://tickets.puppetlabs.com/browse/BOLT-906" scope="external" class="- topic/xref ">BOLT-906</xref> and <xref format="html" href="https://tickets.puppetlabs.com/browse/BOLT-907" scope="external" class="- topic/xref ">BOLT-907</xref>)</p>
+      </section><section class="- topic/section ">
+         <title class="- topic/title ">Redacted passwords for printed target objects (1.2.0)</title>
+
+         <p class="- topic/p ">When the <codeph translate="no" class="+ topic/ph pr-d/codeph ">Target</codeph> object in a 
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            <ph conkeyref="ProductNames/bolt" class="- topic/ph "/> plan is printed, it includes only the host, user, port, and protocol  used. The values for  <codeph translate="no" class="+ topic/ph pr-d/codeph ">password</codeph> and <codeph translate="no" class="+ topic/ph pr-d/codeph ">sudo-password</codeph> are redacted. <xref format="html" href="https://tickets.puppetlabs.com/browse/BOLT-944" scope="external" class="- topic/xref ">(BOLT-944</xref>)</p>
+      </section><section class="- topic/section ">
+         <title class="- topic/title ">Share code between tasks (1.1.0)</title>
+
+         <p class="- topic/p ">
+            <ph conkeyref="ProductNames/bolt" class="- topic/ph "/>  includes the ability to share code between tasks. A task can include a list of files that it requires, from any module, that it copies over and makes available via a _installdir parameter. This feature is also supported in 
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            <ph conkeyref="ProductNames/pe_long" class="- topic/ph "/> 2019.0. For more information see, 
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            <xref href="sharing_task_code.dita" class="- topic/xref "/>. (<xref format="html" href="https://tickets.puppetlabs.com/browse/BOLT-755" scope="external" class="- topic/xref ">BOLT-755</xref>)</p>
+      </section><section class="- topic/section ">
+         <title class="- topic/title ">Upgraded WinRM gem dependencies (1.1.0)</title>
+
+         <p class="- topic/p ">The following gem dependencies have been upgraded to fix the connection between  OMI server on Linux and the WinRM transport: 
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            <ul class="- topic/ul "><li class="- topic/li ">
+                  <p class="- topic/p ">winrm 2.3.0
+</p>
+               </li><li class="- topic/li ">
+                  <p class="- topic/p ">winrm-fs 1.3.1
+</p>
+               </li><li class="- topic/li ">
+                  <p class="- topic/p ">json-schema 2.8.1</p>
+               </li></ul>(<xref format="html" href="https://tickets.puppetlabs.com/browse/BOLT-929" scope="external" class="- topic/xref ">BOLT-929</xref>)</p>
+      </section><section class="- topic/section ">
+         <title class="- topic/title ">Mark  internal tasks as private  (1.1.0)</title>
+
+         <p class="- topic/p ">In the task metadata, you can mark internal tasks as private and prevent them from appearing in task list UIs. (<xref format="html" href="https://tickets.puppetlabs.com/browse/BOLT-734" scope="external" class="- topic/xref ">BOLT-734</xref>)</p>
+      </section><section class="- topic/section ">
+         <title class="- topic/title ">Upload directories via plans (1.1.0)</title>
+
+         <p class="- topic/p ">The <codeph translate="no" class="+ topic/ph pr-d/codeph ">bolt file upload</codeph> command and <codeph translate="no" class="+ topic/ph pr-d/codeph ">upload_file</codeph> action  now upload directories. For use over the PCP transport these commands require puppetlabs-bolt_shim 0.2.0 or later. (<xref format="html" href="https://tickets.puppetlabs.com/browse/BOLT-191" scope="external" class="- topic/xref ">BOLT-191</xref>)</p>
+      </section><section class="- topic/section ">
+         <title class="- topic/title ">Support for public-key signature system&#160;ed25519 (1.1.0)</title>
+
+         <p class="- topic/p ">The ed25519 key type is now supported out-of-the-box in 
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            <ph conkeyref="ProductNames/bolt" class="- topic/ph "/> packages. (<xref format="html" href="https://tickets.puppetlabs.com/browse/BOLT-380" scope="external" class="- topic/xref ">BOLT-380</xref>)</p>
+      </section></conbody></concept>

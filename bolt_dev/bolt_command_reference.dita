@@ -1,0 +1,525 @@
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="reference-9397" domains="(topic reference)                            (topic hi-d)                            (topic ut-d)                            (topic indexing-d)                             (topic pr-d)                            (topic sw-d)                            (topic ui-d)   " ditaarch:DITAArchVersion="1.2" class="- topic/topic       reference/reference "><title class="- topic/title "><ph conkeyref="ProductNames/bolt" class="- topic/ph "/> command reference</title><shortdesc class="- topic/shortdesc ">Review the subcommands, actions, and options that are available for  
+
+      
+
+      
+
+      <ph conkeyref="ProductNames/bolt" class="- topic/ph "/>.</shortdesc><prolog class="- topic/prolog "><author type="creator" translate="no" class="- topic/author ">Jean Bond &lt;jean@puppet.com&gt;</author></prolog><refbody class="- topic/body        reference/refbody "><section class="- topic/section "><title class="- topic/title ">Common 
+
+            
+
+            
+
+            
+
+            <ph conkeyref="ProductNames/bolt" class="- topic/ph "/> commands</title><p class="- topic/p "><ph conkeyref="ProductNames/bolt" class="- topic/ph "/> commands use the syntax: <codeph translate="no" class="+ topic/ph pr-d/codeph ">bolt &lt;subcommand&gt; &lt;action&gt; [options]</codeph>
+
+            <simpletable class="- topic/simpletable "><sthead class="- topic/sthead "><stentry class="- topic/stentry ">Command</stentry><stentry class="- topic/stentry ">Description</stentry><stentry class="- topic/stentry ">Arguments</stentry></sthead><strow class="- topic/strow "><stentry class="- topic/stentry ">
+                     <codeph translate="no" class="+ topic/ph pr-d/codeph ">bolt command run</codeph>
+                     <codeph translate="no" class="+ topic/ph pr-d/codeph ">&lt;COMMAND&gt;</codeph>
+                  </stentry><stentry class="- topic/stentry ">Runs a command on remote nodes.</stentry><stentry class="- topic/stentry ">
+                     <ul class="- topic/ul "><li class="- topic/li ">
+                           <p class="- topic/p ">The command, single quoted if it contains spaces or special characters.</p>
+                        </li><li class="- topic/li ">
+                           <p class="- topic/p ">The nodes on which to run the command.</p>
+                        </li></ul>
+                  </stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry ">
+                     <codeph translate="no" class="+ topic/ph pr-d/codeph ">bolt script run</codeph>
+                  </stentry><stentry class="- topic/stentry ">Runs a script in any language that will run on the remote system.</stentry><stentry class="- topic/stentry ">
+                     <ul class="- topic/ul "><li class="- topic/li ">
+                           <p class="- topic/p ">A path to a local script to run on the remote nodes.</p>
+                        </li><li class="- topic/li ">
+                           <p class="- topic/p ">Optionally, arguments to pass to the script.</p>
+                        </li><li class="- topic/li ">
+                           <p class="- topic/p ">The nodes on which to run the script.</p>
+                        </li></ul>
+                  </stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry ">
+                     <codeph translate="no" class="+ topic/ph pr-d/codeph ">bolt task run</codeph>
+                  </stentry><stentry class="- topic/stentry ">Runs a task on a remote system, passing any specified parameters.</stentry><stentry class="- topic/stentry ">
+                     <ul class="- topic/ul "><li class="- topic/li ">
+                           <p class="- topic/p ">The task name, in the format <codeph translate="no" class="+ topic/ph pr-d/codeph ">modulename::taskname</codeph>.
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           </p>
+                        </li><li class="- topic/li ">
+                           <p class="- topic/p ">The module path to the module containing the task.</p>
+                        </li><li class="- topic/li ">
+                           <p class="- topic/p ">The nodes on which to run the task.</p>
+                        </li></ul>
+                  </stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry ">
+                     <codeph translate="no" class="+ topic/ph pr-d/codeph ">bolt plan run</codeph>
+                  </stentry><stentry class="- topic/stentry ">Runs a task plan.</stentry><stentry class="- topic/stentry ">
+                     <ul class="- topic/ul "><li class="- topic/li ">
+                           <p class="- topic/p ">The plan name, in the format <codeph translate="no" class="+ topic/ph pr-d/codeph ">modulename::planname</codeph>.
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           
+                           </p>
+                        </li><li class="- topic/li ">
+                           <p class="- topic/p ">The module path to the module containing the plan.</p>
+                        </li><li class="- topic/li ">
+                           <p class="- topic/p ">The nodes on which to run the plan.</p>
+                        </li></ul>
+                  </stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry ">
+                     <codeph translate="no" class="+ topic/ph pr-d/codeph ">bolt apply</codeph>
+                  </stentry><stentry class="- topic/stentry ">Applies a <ph conkeyref="ProductNames/puppet" class="- topic/ph "/> manifest file.                <note class="- topic/note ">This command is in development and subject to change. </note>
+                  </stentry><stentry class="- topic/stentry ">
+                     <ul class="- topic/ul "><li class="- topic/li ">
+                           <p class="- topic/p ">The path to the manifest file.</p>
+                        </li><li class="- topic/li ">
+                           <p class="- topic/p "> The nodes on which to run the plan.</p>
+                        </li></ul>
+                  </stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry ">
+                     <codeph translate="no" class="+ topic/ph pr-d/codeph ">bolt file upload</codeph>
+                  </stentry><stentry class="- topic/stentry ">Uploads a local file to a remote node.</stentry><stentry class="- topic/stentry ">
+                     <ul class="- topic/ul "><li class="- topic/li ">
+                           <p class="- topic/p ">The path to the source file.</p>
+                        </li><li class="- topic/li ">
+                           <p class="- topic/p ">The path to the remote location.</p>
+                        </li><li class="- topic/li ">
+                           <p class="- topic/p ">The nodes on which to upload the file.</p>
+                        </li></ul>
+                  </stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry ">
+                     <codeph translate="no" class="+ topic/ph pr-d/codeph ">bolt task show</codeph>
+                  </stentry><stentry class="- topic/stentry ">
+                     <p class="- topic/p ">Lists all the tasks on the modulepath that have not been marked <codeph translate="no" class="+ topic/ph pr-d/codeph ">private</codeph>. Will note whether
+                        a task supports no-operation mode.
+                     
+                     </p>
+                  </stentry><stentry class="- topic/stentry ">
+                     <ul class="- topic/ul "><li class="- topic/li ">
+                           <p class="- topic/p ">Adding a specific task name displays details and parameters for the task.</p>
+                        </li><li class="- topic/li ">
+                           <p class="- topic/p ">The module path to the module containing the task. </p>
+                        </li><li class="- topic/li ">
+                           <p class="- topic/p ">Optionally, the name of a task you want details for: <codeph translate="no" class="+ topic/ph pr-d/codeph ">bolt task show &lt;TASK NAME&gt;</codeph>
+                           </p>
+                        </li></ul>
+                  </stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry ">
+                     <codeph translate="no" class="+ topic/ph pr-d/codeph ">bolt plan show</codeph>
+                  </stentry><stentry class="- topic/stentry ">
+                     <p class="- topic/p ">Lists the plans that are installed on the current module path. </p>
+                  </stentry><stentry class="- topic/stentry ">
+                     <ul class="- topic/ul "><li class="- topic/li ">
+                           <p class="- topic/p ">Adding a specific plan name displays details and parameters for the plan.</p>
+                        </li><li class="- topic/li ">
+                           <p class="- topic/p ">The module path to the module containing the plan.</p>
+                        </li></ul>
+                  </stentry></strow></simpletable></p></section><section class="- topic/section "><title class="- topic/title ">Command options</title><p class="- topic/p ">Options are optional unless marked as required.&#160;
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            <simpletable class="- topic/simpletable "><sthead class="- topic/sthead "><stentry class="- topic/stentry ">Option</stentry><stentry class="- topic/stentry ">Description</stentry></sthead><strow class="- topic/strow "><stentry class="- topic/stentry "><codeph translate="no" class="+ topic/ph pr-d/codeph ">--nodes</codeph>, <codeph translate="no" class="+ topic/ph pr-d/codeph ">-n</codeph>
+                  </stentry><stentry class="- topic/stentry ">
+                     <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Required </b><b class="+ topic/ph hi-d/b ">when running</b>. Nodes to connect to. 
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     </p>
+
+                     <p class="- topic/p ">To connect with WinRM, include the protocol as <codeph translate="no" class="+ topic/ph pr-d/codeph ">winrm://&lt;HOSTNAME&gt;</codeph>.                 
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     </p>
+
+                     <p class="- topic/p ">For an IPv6 address without a port number, encase it brackets 
+					   <codeph translate="no" class="+ topic/ph pr-d/codeph ">[fe80::34eb:ff1:b584:d7c0]</codeph>.  
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     </p>
+
+                     <p class="- topic/p ">For IPv6 addresses including a port use one of the following formats:&#160; <codeph translate="no" class="+ topic/ph pr-d/codeph ">fe80::34eb:ff1:b584:d7c0:22&#160;</codeph> or&#160; <codeph translate="no" class="+ topic/ph pr-d/codeph ">[fe80::34eb:ff1:b584:d7c0]:22</codeph>.
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     </p>
+                  </stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry ">
+                     <codeph translate="no" class="+ topic/ph pr-d/codeph ">--query</codeph>
+                     <codeph translate="no" class="+ topic/ph pr-d/codeph ">, -q</codeph>
+                  </stentry><stentry class="- topic/stentry ">Query PuppetDB to determine the targets.</stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry ">
+                     <codeph translate="no" class="+ topic/ph pr-d/codeph ">--noop</codeph>
+                  </stentry><stentry class="- topic/stentry ">Execute a task that supports it in  no-operation mode.</stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry ">
+                     <codeph translate="no" class="+ topic/ph pr-d/codeph ">--description</codeph>
+                  </stentry><stentry class="- topic/stentry ">Add a description to the run. Used in logging and submitted to
+                     Orchestrator with the PCP transport. </stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry ">
+                     <codeph translate="no" class="+ topic/ph pr-d/codeph ">--params</codeph>
+                  </stentry><stentry class="- topic/stentry ">
+                     <p class="- topic/p ">Parameters, passed as a JSON object on the command line, or as a JSON parameter file, prefaced with <codeph translate="no" class="+ topic/ph pr-d/codeph ">@</codeph> like <codeph translate="no" class="+ topic/ph pr-d/codeph ">@params.json</codeph>. For <ph conkeyref="ProductNames/windows" class="- topic/ph "/><ph conkeyref="ProductNames/powershell" class="- topic/ph "/>, &#160;add single quotation marks  to define the file: 
+<codeph translate="no" class="+ topic/ph pr-d/codeph ">
+     '@params.json'</codeph>
+                     </p>
+                  </stentry></strow></simpletable></p></section><section class="- topic/section "><title class="- topic/title ">Authentication options</title><simpletable class="- topic/simpletable "><sthead class="- topic/sthead "><stentry class="- topic/stentry ">Option</stentry><stentry class="- topic/stentry ">Description</stentry></sthead><strow class="- topic/strow "><stentry class="- topic/stentry "><codeph translate="no" class="+ topic/ph pr-d/codeph ">--user</codeph>, <codeph translate="no" class="+ topic/ph pr-d/codeph ">-u</codeph></stentry><stentry class="- topic/stentry ">User to authenticate as.</stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry "><codeph translate="no" class="+ topic/ph pr-d/codeph ">--password</codeph>, <codeph translate="no" class="+ topic/ph pr-d/codeph ">-p</codeph></stentry><stentry class="- topic/stentry ">Password to authenticate with. Pass this flag without any value to securely prompt for the password.</stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry ">
+                  <codeph translate="no" class="+ topic/ph pr-d/codeph ">--private-key</codeph>
+               </stentry><stentry class="- topic/stentry ">Private ssh key to authenticate with</stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry ">
+                  <codeph translate="no" class="+ topic/ph pr-d/codeph ">--host-key-check, --no-host-key-check</codeph>
+               </stentry><stentry class="- topic/stentry ">
+                  <p class="- topic/p ">Do not require verification of new hosts in the <codeph translate="no" class="+ topic/ph pr-d/codeph ">known_hosts</codeph> file. </p>
+
+                  <p class="- topic/p "><codeph translate="no" class="+ topic/ph pr-d/codeph ">host-key-check</codeph> and <codeph translate="no" class="+ topic/ph pr-d/codeph ">no-host-key-check</codeph> are options for the SSH transport.</p>
+               </stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry "><codeph translate="no" class="+ topic/ph pr-d/codeph ">--ssl</codeph>, <codeph translate="no" class="+ topic/ph pr-d/codeph ">--no-ssl</codeph></stentry><stentry class="- topic/stentry ">
+                  <p class="- topic/p ">Do not require verification of new hosts in the <codeph translate="no" class="+ topic/ph pr-d/codeph ">known_hosts</codeph> file.
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     </p>
+
+                  <p class="- topic/p "><codeph translate="no" class="+ topic/ph pr-d/codeph ">ssl</codeph> and <codeph translate="no" class="+ topic/ph pr-d/codeph ">no-ssl</codeph> are options for WinRM.                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     </p>
+               </stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry "><codeph translate="no" class="+ topic/ph pr-d/codeph ">--ssl-verify</codeph>, <codeph translate="no" class="+ topic/ph pr-d/codeph ">--no-ssl-verify</codeph></stentry><stentry class="- topic/stentry ">
+                  <p class="- topic/p ">Do not verify remote host SSL certificate with WinRM </p>
+
+                  <p class="- topic/p "><codeph translate="no" class="+ topic/ph pr-d/codeph ">ssl-verify</codeph> and <codeph translate="no" class="+ topic/ph pr-d/codeph ">no-ssl-verify</codeph> are options for WinRM.</p>
+               </stentry></strow></simpletable></section><section class="- topic/section "><title class="- topic/title ">Escalation options </title><simpletable class="- topic/simpletable "><sthead class="- topic/sthead "><stentry class="- topic/stentry ">Option</stentry><stentry class="- topic/stentry ">Description</stentry></sthead><strow class="- topic/strow "><stentry class="- topic/stentry ">
+                  <codeph translate="no" class="+ topic/ph pr-d/codeph ">--run-as</codeph>
+               </stentry><stentry class="- topic/stentry ">User to run as using privilege escalation.</stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry ">
+                  <codeph translate="no" class="+ topic/ph pr-d/codeph ">--sudo-password</codeph>
+               </stentry><stentry class="- topic/stentry ">Password for privilege escalation. Omit the value to prompt for the password.</stentry></strow></simpletable></section><section class="- topic/section "><title class="- topic/title ">Run context options</title><p class="- topic/p ">
+            <simpletable class="- topic/simpletable "><sthead class="- topic/sthead "><stentry class="- topic/stentry ">Option</stentry><stentry class="- topic/stentry ">Description</stentry></sthead><strow class="- topic/strow "><stentry class="- topic/stentry "><codeph translate="no" class="+ topic/ph pr-d/codeph ">--concurrency</codeph>, <codeph translate="no" class="+ topic/ph pr-d/codeph ">-c</codeph></stentry><stentry class="- topic/stentry ">Maximum number of simultaneous connections (default: 100).</stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry "><codeph translate="no" class="+ topic/ph pr-d/codeph ">--modulepath</codeph>, <codeph translate="no" class="+ topic/ph pr-d/codeph ">-m</codeph></stentry><stentry class="- topic/stentry "><b class="+ topic/ph hi-d/b ">Required for tasks and plans</b>. The path to the module containing the task. Separate multiple paths with a semicolon (<codeph translate="no" class="+ topic/ph pr-d/codeph ">;</codeph>) on 
+
+                     
+
+                     
+
+                     <ph conkeyref="ProductNames/windows" class="- topic/ph "/> or a colon (<codeph translate="no" class="+ topic/ph pr-d/codeph ">:</codeph>) on all other platforms.
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  </stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry ">
+                     <codeph translate="no" class="+ topic/ph pr-d/codeph ">--configfile</codeph>
+                  </stentry><stentry class="- topic/stentry ">Specify where to load config from (default: <codeph translate="no" class="+ topic/ph pr-d/codeph ">bolt.yaml</codeph> inside the <codeph translate="no" class="+ topic/ph pr-d/codeph ">Boltdir</codeph>).</stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry ">
+                     <codeph translate="no" class="+ topic/ph pr-d/codeph ">--boltdir</codeph>
+                  </stentry><stentry class="- topic/stentry ">Specify what Boltdir to load config from (default: autodiscovered from current working dir).</stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry "><codeph translate="no" class="+ topic/ph pr-d/codeph ">--inventoryfile</codeph>, <codeph translate="no" class="+ topic/ph pr-d/codeph ">-i</codeph></stentry><stentry class="- topic/stentry ">Specify where to load inventory from (default: <codeph translate="no" class="+ topic/ph pr-d/codeph ">inventory.yaml</codeph> inside the <codeph translate="no" class="+ topic/ph pr-d/codeph ">Boltdir</codeph>).</stentry></strow></simpletable>
+         </p></section><section class="- topic/section "><title class="- topic/title ">Transport options</title><simpletable class="- topic/simpletable "><sthead class="- topic/sthead "><stentry class="- topic/stentry ">Option</stentry><stentry class="- topic/stentry ">Description</stentry></sthead><strow class="- topic/strow "><stentry class="- topic/stentry ">
+                  <codeph translate="no" class="+ topic/ph pr-d/codeph ">--transport</codeph>
+               </stentry><stentry class="- topic/stentry ">Specifies the default transport for this command. To override, specify the transport for a given node, such as <codeph translate="no" class="+ topic/ph pr-d/codeph ">ssh://linuxnode</codeph>.
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  </stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry ">
+                  <codeph translate="no" class="+ topic/ph pr-d/codeph ">--connect-timeout</codeph>
+               </stentry><stentry class="- topic/stentry ">Connection timeout (defaults vary).</stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry "><codeph translate="no" class="+ topic/ph pr-d/codeph ">--tty</codeph>, <codeph translate="no" class="+ topic/ph pr-d/codeph ">--no-tty</codeph></stentry><stentry class="- topic/stentry ">Applicable to SSH transport only. Some commands, such as <codeph translate="no" class="+ topic/ph pr-d/codeph ">sudo</codeph>, may require a pseudo TTY to execute. If so, specify <codeph translate="no" class="+ topic/ph pr-d/codeph ">--tty</codeph>.</stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry ">
+                  <codeph translate="no" class="+ topic/ph pr-d/codeph ">--tmpdir</codeph>
+               </stentry><stentry class="- topic/stentry ">
+                  <p class="- topic/p ">Determines the directory to upload and execute temporary files on the target.
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     </p>
+               </stentry></strow></simpletable></section><section class="- topic/section "><title class="- topic/title ">Display options</title><p class="- topic/p ">
+            <simpletable class="- topic/simpletable "><sthead class="- topic/sthead "><stentry class="- topic/stentry ">Option</stentry><stentry class="- topic/stentry ">Description</stentry></sthead><strow class="- topic/strow "><stentry class="- topic/stentry ">
+                     <codeph translate="no" class="+ topic/ph pr-d/codeph ">--format</codeph>
+                  </stentry><stentry class="- topic/stentry ">Determines the output format to use: human readable or JSON.</stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry "><codeph translate="no" class="+ topic/ph pr-d/codeph ">--color</codeph>, <codeph translate="no" class="+ topic/ph pr-d/codeph ">--no-color</codeph></stentry><stentry class="- topic/stentry ">Whether to show output in color.
+
+				 </stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry "><codeph translate="no" class="+ topic/ph pr-d/codeph ">--help</codeph>, <codeph translate="no" class="+ topic/ph pr-d/codeph ">-h</codeph></stentry><stentry class="- topic/stentry ">Shows help for the <codeph translate="no" class="+ topic/ph pr-d/codeph ">bolt</codeph> command.
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  </stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry ">
+                     <codeph translate="no" class="+ topic/ph pr-d/codeph ">--verbose</codeph>, <codeph translate="no" class="+ topic/ph pr-d/codeph ">-v</codeph>
+                  </stentry><stentry class="- topic/stentry ">Shows verbose logging.</stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry ">
+                     <codeph translate="no" class="+ topic/ph pr-d/codeph ">--debug</codeph>
+                  </stentry><stentry class="- topic/stentry ">Shows debug logging.
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                 </stentry></strow><strow class="- topic/strow "><stentry class="- topic/stentry ">
+                     <codeph translate="no" class="+ topic/ph pr-d/codeph ">--version</codeph>
+                  </stentry><stentry class="- topic/stentry ">Shows the 
+
+                     
+
+                     
+
+                     <ph conkeyref="ProductNames/bolt" class="- topic/ph "/> version.</stentry></strow></simpletable>
+         </p></section></refbody></reference>

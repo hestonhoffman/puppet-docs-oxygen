@@ -1,0 +1,10 @@
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="concept-3968" domains="(topic concept)                            (topic hi-d)                            (topic ut-d)                            (topic indexing-d)                             (topic pr-d)                            (topic sw-d)                            (topic ui-d)   " ditaarch:DITAArchVersion="1.2" class="- topic/topic concept/concept "><title class="- topic/title ">Returning errors in plans</title><shortdesc class="- topic/shortdesc ">To return an error if your plan fails, include an <codeph translate="no" class="+ topic/ph pr-d/codeph ">Error</codeph> object in your plan. </shortdesc><prolog class="- topic/prolog "><author type="creator" translate="no" class="- topic/author ">Jean Bond &lt;jean@puppet.com&gt;</author></prolog><conbody class="- topic/body  concept/conbody "><p class="- topic/p ">Specify <codeph translate="no" class="+ topic/ph pr-d/codeph ">Error</codeph> parameters to provide details about the failure.</p><p class="- topic/p ">For example, if called with <codeph translate="no" class="+ topic/ph pr-d/codeph ">run_plan('mymodule::myplan')</codeph>, this  would return an error to the caller.</p><p class="- topic/p ">
+
+        <codeblock translate="no" xml:space="preserve" class="+ topic/pre pr-d/codeblock ">plan mymodule::myplan {
+  Error(
+    message &#160;  =&gt; "Sorry, this plan does not work yet.",
+    kind &#160;     =&gt; 'mymodule/error',
+    issue_code =&gt; 'NOT_IMPLEMENTED'
+    )
+  }</codeblock></p></conbody></concept>
