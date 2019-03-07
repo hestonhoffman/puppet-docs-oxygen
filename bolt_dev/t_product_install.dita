@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_vmp_qq2_1hb">
+    <title>Install <ph conref="keywords.dita#concept-8893/mco"/></title>
+    <shortdesc>Install <ph conref="keywords.dita#concept-8893/mco"/> on your server and manage small
+        pieces of work on your infrastructure. </shortdesc>
+    <taskbody>
+        <prereq id="prereq_olx_jt2_1hb">Obtain administrator credentials for your server. </prereq>
+        <context>
+            <p></p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Download the <ph conref="keywords.dita#concept-8893/mco"/> installation
+                    package.</cmd>
+            </step>
+            <step>
+                <cmd>Double-click <filepath>mco.exe</filepath> to start the installation wizard.
+                </cmd>
+            </step>
+            <step>
+                <cmd>Enter your administrator credentials and click <uicontrol>OK</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>
