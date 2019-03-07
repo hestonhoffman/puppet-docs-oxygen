@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
 <reference id="reference_cjm_kw2_1hb">
-    <title></title>
-    <shortdesc></shortdesc>
+    <title><ph conref="keywords.dita#concept-8893/mco"/> API</title>
+    <shortdesc>Background information, often in table format, that  supports a task or
+        concept.</shortdesc>
     <refbody> </refbody>
 </reference>
