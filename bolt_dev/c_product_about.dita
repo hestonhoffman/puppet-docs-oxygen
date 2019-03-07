@@ -6,5 +6,9 @@
     <conbody>
         <p><ph conref="keywords.dita#concept-8893/mco"/>does many things for <ph
                 conref="keywords.dita#concept-8893/puppet_inc"/>.</p>
+        <fig id="fig_b5n_4df_1hb">
+            <title>Modal dialog for remove group</title>
+        </fig>
+        <image href="Screen%20Shot%202019-03-05%20at%2010.49.04%20AM.png" id="image_wcy_mdf_1hb"/>
     </conbody>
 </concept>
