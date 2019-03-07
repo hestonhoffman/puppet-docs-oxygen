@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
 <map>
-    <title></title>
+    <title>Doc section map</title>
+    <topicref href="c_product_about.dita"/>
+    <topicref href="t_product_install.dita"/>
+    <topicref href="r_product_api.dita"/>
 </map>
