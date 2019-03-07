@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
 <task id="task_dgw_vz2_1hb">
-    <title></title>
-    <shortdesc></shortdesc>
+    <title>Install <ph conref="keywords.dita#concept-8893/mco"/> on <ph
+            conref="keywords.dita#concept-8893/windows"/></title>
+    <shortdesc>Add content to topics by entering text and applying appropriate element
+        tags.</shortdesc>
     <taskbody>
+        <prereq id="prereq_sry_ybf_1hb"><xref href="c_product_about.dita">Review the system
+                requirements for this product. </xref></prereq>
         <context>
-            <p></p>
+            <p><xref href="t_product_install.dita"/><image href="bolt-logo-dark.png"
+                    id="image_rrl_tbf_1hb"/></p>
         </context>
         <steps>
             <step>
