@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_sss_q52_1hb">
-    <title></title>
-    <shortdesc></shortdesc>
+    <title><ph conref="keywords.dita#concept-8893/mco"/> Concept</title>
+    <shortdesc>    Explanation of features and functionality, or overview  content.</shortdesc>
     <conbody>
-        <p></p>
+        <p><ph conref="keywords.dita#concept-8893/mco"/>does many things for <ph
+                conref="keywords.dita#concept-8893/puppet_inc"/>.</p>
     </conbody>
 </concept>
