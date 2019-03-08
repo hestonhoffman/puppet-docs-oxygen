@@ -4,11 +4,17 @@
     <title><ph conref="keywords.dita#concept-8893/mco"/> Concept</title>
     <shortdesc>    Explanation of features and functionality, or overview  content.</shortdesc>
     <conbody>
-        <p><ph conref="keywords.dita#concept-8893/mco"/>does many things for <ph
-                conref="keywords.dita#concept-8893/puppet_inc"/>.</p>
         <fig id="fig_b5n_4df_1hb">
             <title>Modal dialog for remove group</title>
         </fig>
         <image href="Screen%20Shot%202019-03-05%20at%2010.49.04%20AM.png" id="image_wcy_mdf_1hb"/>
+        <p><ph conref="keywords.dita#concept-8893/mco"/>does many things for <ph
+                conref="keywords.dita#concept-8893/puppet_inc"/>.</p>
+        <p>To insert the next logical element from within any given element, press
+                <uicontrol>Enter</uicontrol>.</p>
+        <fig id="fig_xk2_ghf_1hb">
+            <title><ph conref="keywords.dita#concept-8893/google"/> Alias dialog</title>
+            <image href="Screen.png" id="image_d3z_qgf_1hb"/>
+        </fig>
     </conbody>
 </concept>
