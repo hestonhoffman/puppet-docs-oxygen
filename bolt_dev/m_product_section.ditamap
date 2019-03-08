@@ -7,4 +7,29 @@
         <topicref href="t_product_install.dita" collection-type="sequence"/>
         <topicref href="r_product_api.dita"/>
     </topicref>
+    <reltable>
+     <relheader class="- map/relheader ">
+                                                <relcolspec linking="sourceonly" type="topic"
+                                                  class="- map/relcolspec "/>
+                                                <relcolspec linking="targetonly" type="topic"
+                                                  class="- map/relcolspec "/>
+                                </relheader>
+        <relrow>
+            <relcell>
+                <topicref href="t_product_install.dita"/>
+            </relcell>
+            <relcell>
+                <topicref href="running_bolt_commands.dita"/>
+                <topicref href="sharing_task_code.dita"/>
+            </relcell>
+        </relrow>
+        <relrow>
+            <relcell>
+                <topicref href="c_product_about.dita"/>
+            </relcell>
+            <relcell>
+                <topicref href="general_functions_in_plans.dita"/>
+            </relcell>
+        </relrow>
+    </reltable>
 </map>
