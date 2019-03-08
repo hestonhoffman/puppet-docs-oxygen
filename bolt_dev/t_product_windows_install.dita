@@ -14,7 +14,10 @@
         </context>
         <steps>
             <step>
-                <cmd></cmd>
+                <cmd>Check out this code example.</cmd>
+                <info>
+                    <codeblock conref="conref_manifest_task.dita#task-560/codeblock_kwq_pnf_1hb"/>
+                </info>
             </step>
         </steps>
     </taskbody>
