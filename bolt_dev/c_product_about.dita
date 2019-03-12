@@ -12,12 +12,14 @@
                 conref="keywords.dita#concept-8893/puppet_inc"/>.</p>
         <p>To insert the next logical element from within any given element, press
                 <uicontrol>Enter</uicontrol>.</p>
+        <p>Like the easy way to enter tags.</p>
         <fig id="fig_xk2_ghf_1hb">
             <title><ph conref="keywords.dita#concept-8893/google"/> Alias dialog</title>
             <desc><xref href="naming_plans.dita"/></desc>
-            <p>Love the easy way to enter tags.</p>
+            <p>Like the easy way to enter tags.</p>
             <image href="Screen.png" id="image_d3z_qgf_1hb"/>
             <xref href="http://www.google.com" format="html" scope="external"/>
         </fig>
+        <image href="Screen.png" id="image_ah1_dkp_bhb"/>
     </conbody>
 </concept>
