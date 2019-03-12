@@ -4,9 +4,9 @@
     <title>Make waffles</title>
     <shortdesc>Make great tasting waffles with a few simple ingredients. </shortdesc>
     <taskbody>
-        <context>
-            <p></p>
-        </context>
+        <context><p><ph conkeyref="ProductNames/forge"/> is a keyword.</p><xref
+                href="handling_plan_function_results.dita" format="dita"/><xref
+                href="http://www.puppetforge.com" format="html" scope="external"/></context>
         <steps>
             <step conref="conref_manifest_task.dita#task-560/step-1533845297884">
                 <cmd/>
