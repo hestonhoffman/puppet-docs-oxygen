@@ -7,7 +7,7 @@
     <taskbody>
         <prereq id="prereq_olx_jt2_1hb">Obtain administrator credentials for your server. </prereq>
         <context>
-            <p></p>
+            <p conref="t_make_waffles.dita#task_bwn_bhp_bhb/p_lvr_bnp_bhb"/>
         </context>
         <steps>
             <step>
