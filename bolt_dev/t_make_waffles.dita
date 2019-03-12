@@ -8,8 +8,11 @@
             <p></p>
         </context>
         <steps>
-            <step>
-                <cmd></cmd>
+            <step conref="conref_manifest_task.dita#task-560/step-1533845297884">
+                <cmd/>
+            </step>
+            <step conref="conref_manifest_task.dita#task-560/step-1533845333366">
+                <cmd/>
             </step>
         </steps>
     </taskbody>
