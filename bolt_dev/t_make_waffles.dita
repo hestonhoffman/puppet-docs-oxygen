@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
 <task id="task_bwn_bhp_bhb">
-    <title>Make waffles</title>
+    <title><?oxy_delete author="Kate Lopresti" timestamp="20190313T003702+0000" content="Make"?><?oxy_insert_start author="Kate Lopresti" timestamp="20190313T003702+0000"?>Create<?oxy_insert_end?>
+        waffles</title>
     <shortdesc>Make great tasting waffles with a few simple ingredients. </shortdesc>
     <taskbody>
         <context><p id="p_lvr_bnp_bhb"><ph conkeyref="ProductNames/forge"/> is a keyword.</p><xref
@@ -18,3 +19,4 @@
         </steps>
     </taskbody>
 </task>
+<?oxy_options track_changes="on"?>
