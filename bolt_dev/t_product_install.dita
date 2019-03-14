@@ -2,10 +2,23 @@
 <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
 <task id="task_vmp_qq2_1hb">
     <title>Install <ph conref="keywords.dita#concept-8893/mco"/></title>
-    <shortdesc>Install <ph conref="keywords.dita#concept-8893/mco"/> on your server and manage small
-        pieces of work on your infrastructure. </shortdesc>
+    <shortdesc><?oxy_delete author="Kate Lopresti" timestamp="20190314T191014+0000" content="Install"?>
+        <ph conref="keywords.dita#concept-8893/mco"/> on your server and manage small pieces of work
+        on your infrastructure. </shortdesc>
     <taskbody>
-        <prereq id="prereq_olx_jt2_1hb">Obtain administrator credentials for your server. </prereq>
+        <?oxy_comment_start author="Kate Lopresti" timestamp="20190314T185253+0000" comment="There are additional prereqs..." id="n5h_snc_chb"?>
+        <?oxy_comment_start author="Kate Lopresti" timestamp="20190314T185312+0000" comment="No there aren&apos;t. " parentID="n5h_snc_chb" mid="2"?>
+        <?oxy_comment_start author="Kate Lopresti" timestamp="20190314T185318+0000" comment="I added two. " parentID="n5h_snc_chb" mid="1"?>
+        <prereq id="prereq_olx_jt2_1hb">
+            <?oxy_insert_start author="Kate Lopresti" timestamp="20190314T185434+0000" type="surround"?>
+            <ul id="ul_nwy_wnc_chb">
+                <li><?oxy_insert_end?>Obtain administrator credentials for your server. </li>
+                <?oxy_insert_start author="Kate Lopresti" timestamp="20190314T185444+0000"?>
+                <li>Obtain license from your site administrator. </li>
+                <li>Send 'outage' email message to team.</li>
+                <?oxy_insert_end?>
+            </ul>
+        </prereq><?oxy_comment_end?><?oxy_comment_end mid="2"?><?oxy_comment_end mid="1"?>
         <context>
             <p conref="t_make_waffles.dita#task_bwn_bhp_bhb/p_lvr_bnp_bhb"/>
         </context>
@@ -24,3 +37,4 @@
         </steps>
     </taskbody>
 </task>
+<?oxy_options track_changes="on"?>
