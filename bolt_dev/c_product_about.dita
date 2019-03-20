@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="concept_sss_q52_1hb">
-    <title><?oxy_insert_start author="Kate Lopresti" timestamp="20190319T235553+0000"?>jhgjhg<?oxy_insert_end?><ph
-            conref="keywords.dita#concept-8893/mco"/> Concept</title>
-    <shortdesc>    Explanation of features and functionality, or overview  content.</shortdesc>
+    <title><?oxy_insert_start author="Kate Lopresti" timestamp="20190319T235553+0000"?>jhgjhg<?oxy_insert_end?><ph conref="keywords.dita#concept-8893/mco"/> Concept</title>
+    <shortdesc><?oxy_comment_start author="Kate Lopresti" timestamp="20190319T222817+0000" comment="Delete this section."?>
+        Explanation of features and functionality, or overview
+        content.<?oxy_comment_end?></shortdesc>
     <conbody>
         <fig id="fig_b5n_4df_1hb">
             <title>Modal dialog for remove group</title>
